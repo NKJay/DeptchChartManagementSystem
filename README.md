@@ -26,7 +26,7 @@ To run the Depth Chart Management System, follow these steps:
 
 1. **Clone the Repository**: Clone the repository to your local machine using Git.
 
-2. **Open Solution in Visual Studio**: Navigate to the cloned repository and open the solution file (`DepthChartManagement.sln`) in Visual Studio.
+2. **Open Solution in Visual Studio**: Navigate to the cloned repository and open the solution file (`DepthChartManagementcSystem.sln`) in Visual Studio.
 
 3. **Build Solution**: Build the solution to restore dependencies and compile the project.
 
@@ -36,7 +36,7 @@ To run the Depth Chart Management System, follow these steps:
 
 To test the Depth Chart Management System, follow these steps:
 
-1. **Open Test Project**: Open the test project (`DepthChartManagement.Tests`) in Visual Studio.
+1. **Open Test Project**: Open the test project (`DepthChartManagementSystem.Tests`) in Visual Studio.
 
 2. **Run Tests**: Run the tests using the test runner in Visual Studio. Ensure that all tests pass successfully.
 
