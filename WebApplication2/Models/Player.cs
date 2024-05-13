@@ -4,7 +4,6 @@
     {
         public string Number { get; set; }
         public string Name { get; set; }
-        public string? Position { get; }
         public int PositionDepth { get; set; }
 
         public Player(string number, string name)
@@ -21,12 +20,12 @@
             }
 
             Player other = (Player)obj;
-            return Number == other.Number && Name == other.Name && Position == other.Position;
+            return Number == other.Number && Name == other.Name;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Number, Name, Position);
+            return HashCode.Combine(Number, Name);
         }
     }
 }

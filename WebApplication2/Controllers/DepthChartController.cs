@@ -15,35 +15,28 @@ namespace WebApplication2.Controller
             _depthChartOperation = new DepthChartOperations();
         }
 
-        [HttpPost("addPlayerToDepthChart")]
+        [HttpPost("/player")]
         public IActionResult AddPlayerToDepthChart(string position, [FromBody] Player player, int? positionDepth = null)
         {
-            try
-            {
-                _depthChartOperation.AddPlayerToDepthChart(position, player, positionDepth);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            _depthChartOperation.AddPlayerToDepthChart(position, player, positionDepth);
+            return Ok();
         }
 
-        [HttpDelete("removePlayerFromDepthChart")]
+        [HttpDelete("/player")]
         public IActionResult RemovePlayerFromDepthChart(string position, [FromBody] Player player)
         {
-                var removedPlayer = _depthChartOperation.RemovePlayerFromDepthChart(position, player);
-                return Ok(removedPlayer);
+            var removedPlayer = _depthChartOperation.RemovePlayerFromDepthChart(position, player);
+            return Ok(removedPlayer);
         }
 
-        [HttpPost("getBackups")]
+        [HttpPost("/{position}/backups")]
         public IActionResult GetBackups(string position, [FromBody] Player player)
         {
-                var backups = _depthChartOperation.GetBackups(position, player);
-                return Ok(backups);
+            var backups = _depthChartOperation.GetBackups(position, player);
+            return Ok(backups);
         }
 
-        [HttpGet("getFullDepthChart")]
+        [HttpGet("/fullDepthChart")]
         public IActionResult GetFullDepthChart()
         {
             var fullDepthChart = _depthChartOperation.GetFullDepthChart();
