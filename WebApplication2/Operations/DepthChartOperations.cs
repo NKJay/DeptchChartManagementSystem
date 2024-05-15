@@ -81,6 +81,14 @@ namespace WebApplication2.Operations
 
         public Dictionary<string, List<Player>> GetFullDepthChart()
         {
+            foreach (var position in _depthChart)
+            {
+                Console.WriteLine($"Position: {position.Key}");
+                foreach (var player in position.Value)
+                {
+                    Console.WriteLine($"  Player: {player.Name}"); // 假设Player类有一个Name属性
+                }
+            }
             return _depthChart;
         }
 
